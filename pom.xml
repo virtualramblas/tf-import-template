@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.googlielmo</groupId>
+  <artifactId>tf-import-template</artifactId>
+  <version>1.0</version>
+  
+  <properties>
+	<dl4j.version>1.0.0-beta2</dl4j.version>
+	<tensorflow.version>1.11.0</tensorflow.version>
+	<javacpp.version>1.4.3</javacpp.version>
+  </properties>
+  
+  <dependencies>
+  	<!-- ND4J backend, mandatory for DL4J -->
+  	<dependency>
+	  <groupId>org.nd4j</groupId>
+	  <artifactId>nd4j-api</artifactId>
+	  <version>${dl4j.version}</version>
+	</dependency>
+  	<dependency>
+      <groupId>org.nd4j</groupId>
+      <artifactId>nd4j-native-platform</artifactId>
+      <version>${dl4j.version}</version>
+	</dependency>
+	<!-- ND4J TensorFlow module -->
+	<dependency>
+      <groupId>org.nd4j</groupId>
+      <artifactId>nd4j-tensorflow</artifactId>
+      <version>${dl4j.version}</version>
+	</dependency>
+	<!-- JavaCPP TensorFlow module -->
+	<dependency>
+      <groupId>org.bytedeco.javacpp-presets</groupId>
+      <artifactId>tensorflow-platform</artifactId>
+      <version>${tensorflow.version}-${javacpp.version}</version>
+	</dependency>
+	
+	<!--<dependency>
+       <groupId>org.deeplearning4j</groupId>
+       <artifactId>deeplearning4j-datasets</artifactId>
+       <version>${dl4j.version}</version>
+	</dependency>-->
+  </dependencies>
+</project>
